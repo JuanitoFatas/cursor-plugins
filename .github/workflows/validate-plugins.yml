@@ -2,10 +2,11 @@ name: Validate plugins
 
 on:
   pull_request:
-    paths:
-      - ".cursor-plugin/marketplace.json"
-      - "**/plugin.json"
-      - "schemas/**"
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   validate:
